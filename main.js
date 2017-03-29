@@ -1,5 +1,7 @@
 /*
-# Main file for the Worst character generator
+# main.js
+
+Main file for the Worst character generator
 */
 
 function randInt (min, max, inclusive = false) {
@@ -19,6 +21,7 @@ function rollDie (die, amount = 1) {
             dice += randInt(1, die, true) // x | 1<=x<=die and x is int
         }
     }
+    return dice
 }
 
 class Character {
@@ -31,22 +34,24 @@ class Character {
         this.raceBase = this.bodyBase + this.mindBase + this.spiritBase
         this.age = age.minimum + rollDie(age.modifier)
         this.movement = movement
+        this.climbspeed = this.movement / 2
 
         this.body = this.bodyBase + rollDie(6, this.bodyBase)
         this.mind = this.mindBase + rollDie(6, this.mindBase)
         this.spirit = this.spiritBase + rollDie(6, this.spiritBase)
         this.weavePoints = this.body + this.mind + this.spirit
 
-        this.bodyMod = floor(this.body / 10)
-        this.mindMod = floor(this.mind / 10)
-        this.spiritMod = floor(this.spirit / 10)
-        this.weavePointsMod = floor(this.weavePoints / 10)
+        this.bodyMod = Math.floor(this.body / 10)
+        this.mindMod = Math.floor(this.mind / 10)
+        this.spiritMod = Math.floor(this.spirit / 10)
+        this.weavePointsMod = Math.floor(this.weavePoints / 10)
 
-        this.bms = floor((this.bodyMod + this.mindMod + this.spiritMod) / 10)
+        this.bms = Math.floor((this.bodyMod + this.mindMod + this.spiritMod) / 10)
         this.attack = this.grabDefense = this.initiative = this.bodyMod + this.spiritMod
         this.armor = this.climb = this.bodyMod + this.mindMod + this.spiritMod
-        this.luckSave = this.untrap = this.mindMod + this.spiritMod
+        this.luck = this.untrap = this.mindMod + this.spiritMod
         this.sneak = this.spiritMod
+        this.skill = this.luck
     }
 }
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <title>Character Generator</title>
+    </head>
+    <body>
+        <h1>Worst Character Generator</h1>
+        <div class="form">
+            <span class="name">Name: <input type="text" id="nameinput" value="Character"></span>
+            <span class="race">Race: <select id="raceinput">
+                <option value="human">Human</option>
+                <option value="elf">Elf</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="wizard">Wizard</option>
+                <option value="halfling">Halfling</option>
+                <option value="lizard">Lizard Folk</option>
+                <option value="orc">Orc</option>
+                <option value="halfbreed">Half Breed</option>
+            </select></span>
+            <span class="humanbns"><select id="humanbnsinput">
+                <option value="body">Body</option>
+                <option value="mind">Mind</option>
+                <option value="spirit">Spirit</option>
+            </select></span>
+            <span class="generate"><button type="button" id="generate">Generate</button></span>
+        </div>
+        <div class="other">
+            <p>
+                <a href="blank.html">Blank character sheet</a>
+            </p>
+        </div>
+    </body>
+    <script src="main.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+</html>

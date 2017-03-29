@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="character.css">
+        <title>Character Sheet</title>
+    </head>
+    <body>
+        <div class="charactersheet">
+            <div class="header">
+                <h1>Worst Character Sheet</h1>
+            </div>
+            <div class="basic">
+                <span class="name">Name: <span class="underlined" id="name"></span></span>
+                <span class="race">Race: <span class="underlined" id="race"></span></span>
+                <span class="racebase">Race Base: <table>
+                    <thead>
+                        <tr>
+                            <th class="label">B</th>
+                            <th class="label">M</th>
+                            <th class="label">S</th>
+                            <th class="hide label"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="bodybase" class="data body"></td>
+                            <td id="mindbase" class="data mind"></td>
+                            <td id="spiritbase" class="data spirit"></td>
+                            <td id="racebase" class="data racebase"></td>
+                        </tr>
+                    </tbody>
+                </table></span>
+            </div>
+            <div class="bmsstats">
+                <div class="bms">
+                    <table class="stat">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th title="Starting Statistic">Start Stat</th>
+                                <th title="Adjusted Statistic">Adj. Stat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">Body:</td>
+                                <td id="body" class="data"></td>
+                                <td class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Mind:</td>
+                                <td id="mind" class="data"></td>
+                                <td class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Spirit:</td>
+                                <td id="spirit" class="data"></td>
+                                <td class="data"></td>
+                            </tr>
+                            <tr class="weaverow">
+                                <td class="label">Weave Energy:</td>
+                                <td id="weaveenergy" class="data"></td>
+                                <td class="data"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="mod">
+                        <tr>
+                            <td class="label">BMod 10%=</td>
+                            <td id="bodymod" class="data"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">MMod 10%=</td>
+                            <td id="mindmod" class="data"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">SMod 10%=</td>
+                            <td id="spiritmod" class="data"></td>
+                        </tr>
+                        <tr>
+                            <td class="note" colspan="2">May subtract 10<br /> points to add 1<br /> point to B, M, or S.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="stats">
+                    <table class="aaa">
+                        <tbody>
+                            <tr>
+                                <td class="label">Attack:</td>
+                                <td id="attack" class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Armor<br /> Base:</td>
+                                <td id="armorbase" class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Armor<br /> Bonus:</td>
+                                <td id="armorbonus" class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Move<br /> Speed:</td>
+                                <td id="movespeed" class="data"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="iga">
+                        <tbody>
+                            <tr>
+                                <td class="label">Initiative:</td>
+                                <td id="initiative" class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Grab<br /> Defense:</td>
+                                <td id="grabdefense" class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Armor:</td>
+                                <td id="armortotal" class="data"></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Climb<br /> Speed:</td>
+                                <td id="climbspeed" class="data"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="weapons">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="main">Weapons</th>
+                            <th>Range</th>
+                            <th>Attack Mod</th>
+                            <th>Damage Dice</th>
+                            <th>Damage Bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rolls">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="label">Luck</td><td id="luckbase" class="data base"></td><td id="luckbonus" class="data bonus"></td><td id="lucktotal" class="data total"></td>
+                        </tr>
+                        <tr class="1">
+                            <td class="label">Sneak</td><td id="sneakbase" class="data base"></td><td id="sneakbonus" class="data bonus"></td><td id="sneaktotal" class="data total"></td>
+                        </tr>
+                        <tr class="2">
+                            <td class="label">Climb</td><td id="climbbase" class="data base"></td><td id="climbbonus" class="data bonus"></td><td id="climbtotal" class="data total"></td>
+                        </tr>
+                        <tr class="3">
+                            <td class="label">Skills</td><td id="skillsbase" class="data base"></td><td id="skillsbonus" class="data bonus"></td><td id="skillstotal" class="data total"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="armor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="main">Armor</th>
+                            <th>Type</th>
+                            <th>Bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="gear">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Gear</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="vision">
+                <span class="vision">Vision: <span class="underlined" id="vision"></span></span>
+            </div>
+            <div class="weave">
+                <span class="main">Weave Mastery</span>
+                <table class="color">
+                    <tbody>
+                        <tr>
+                            <td id="weavered" class="data"></td><td class="label">Red</td>
+                        </tr>
+                        <tr>
+                            <td id="weavegreen" class="data"></td><td class="label">Green</td>
+                        </tr>
+                        <tr>
+                            <td id="weaveblue" class="data"></td><td class="label">Blue</td>
+                        </tr>
+                        <tr>
+                            <td id="weavewhite" class="data"></td><td class="label">White</td>
+                        </tr>
+                        <tr>
+                            <td id="weaveblack" class="data"></td><td class="label">Black</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="karma">
+                    <tbody>
+                        <tr>
+                            <th colspan="2">Spell Karma</th>
+                        </tr>
+                        <tr>
+                            <td class="label">Good</td>
+                            <td id="karmagood" class="data"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Bad</td>
+                            <td id="karmabad" class="data"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="loot">
+                <span class="main">Loot List</span>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">cp:</td><td class="data money"></td>
+                        </tr>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">sp:</td><td class="data money"></td>
+                        </tr>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">gp:</td><td class="data money"></td>
+                        </tr>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">pp:</td><td class="data money"></td>
+                        </tr>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">Gems:</td><td class="data money"></td>
+                        </tr>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">Gems:</td><td class="data money"></td>
+                        </tr>
+                        <tr>
+                            <td class="data money"></td><td class="hide"></td><td class="label money">Gems:</td><td class="data money"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="skill">
+                <span class="main">Skill Focus</span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Base</th>
+                            <th>Bonus</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="data type"></td><td class="data base"></td><td class="data bonus"></td><td class="data total"></td>
+                        </tr>
+                        <tr>
+                            <td class="data type"></td><td class="data base"></td><td class="data bonus"></td><td class="data total"></td>
+                        </tr>
+                        <tr>
+                            <td class="data type"></td><td class="data base"></td><td class="data bonus"></td><td class="data total"></td>
+                        </tr>
+                        <tr>
+                            <td class="data type"></td><td class="data base"></td><td class="data bonus"></td><td class="data total"></td>
+                        </tr>
+                        <tr>
+                            <td class="data type"></td><td class="data base"></td><td class="data bonus"></td><td class="data total"></td>
+                        </tr>
+                        <tr>
+                            <td class="data type"></td><td class="data base"></td><td class="data bonus"></td><td class="data total"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
