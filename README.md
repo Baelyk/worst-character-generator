@@ -2,6 +2,8 @@
 
 A character generator for Worst
 
+[Try it!](https://baelyk.github.io/worst-character-generator/)
+
 ## Files
 
 ### CSS
