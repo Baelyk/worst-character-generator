@@ -244,6 +244,12 @@ table, th, td {
 .gear table {
     border-collapse: separate;
     width: 104px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.gear th {
+    padding-bottom: 0;
 }
 
 .gear th, .gear td {

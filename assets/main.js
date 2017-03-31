@@ -47,9 +47,9 @@ class Character {
         this.weavePointsMod = Math.floor(this.weavePoints / 10)
 
         this.bms = Math.floor((this.bodyMod + this.mindMod + this.spiritMod) / 10)
-        this.attack = this.grabDefense = this.initiative = this.bodyMod + this.spiritMod
+        this.attack = this.grabDefense = this.bodyMod + this.spiritMod
         this.armor = this.climb = this.bodyMod + this.mindMod + this.spiritMod
-        this.luck = this.untrap = this.mindMod + this.spiritMod
+        this.luck = this.untrap = this.initiative = this.mindMod + this.spiritMod
         this.sneak = this.spiritMod
         this.skill = this.luck
     }

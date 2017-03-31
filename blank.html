@@ -40,28 +40,33 @@
                                 <th></th>
                                 <th title="Starting Statistic">Start Stat</th>
                                 <th title="Adjusted Statistic">Adj. Stat</th>
+                                <th title="Temporary Statistic">Tmp Stat</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="label">Body:</td>
                                 <td id="body" class="data"></td>
-                                <td class="data"></td>
+                                <td id="bodyadjusted" class="data"></td>
+                                <td id="bodytemp" class="data"></td>
                             </tr>
                             <tr>
                                 <td class="label">Mind:</td>
                                 <td id="mind" class="data"></td>
-                                <td class="data"></td>
+                                <td id="mindadjusted" class="data"></td>
+                                <td id="mindtemp" class="data"></td>
                             </tr>
                             <tr>
                                 <td class="label">Spirit:</td>
                                 <td id="spirit" class="data"></td>
-                                <td class="data"></td>
+                                <td id="spiritadjusted" class="data"></td>
+                                <td id="spirittemp" class="data"></td>
                             </tr>
                             <tr class="weaverow">
                                 <td class="label">Weave Energy:</td>
                                 <td id="weaveenergy" class="data"></td>
-                                <td class="data"></td>
+                                <td id="weaveadjusted" class="data"></td>
+                                <td id="weavetemp" class="data"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -138,47 +143,47 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="weapon1">
+                            <td id="weapon1type"></td>
+                            <td id="weapon1range"></td>
+                            <td id="weapon1attack"></td>
+                            <td id="weapon1dice"></td>
+                            <td id="weapon1damage"></td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="weapon2">
+                            <td id="weapon2type"></td>
+                            <td id="weapon2range"></td>
+                            <td id="weapon2attack"></td>
+                            <td id="weapon2dice"></td>
+                            <td id="weapon2damage"></td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="weapon3">
+                            <td id="weapon3type"></td>
+                            <td id="weapon3range"></td>
+                            <td id="weapon3attack"></td>
+                            <td id="weapon3dice"></td>
+                            <td id="weapon3damage"></td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="weapon4">
+                            <td id="weapon4type"></td>
+                            <td id="weapon4range"></td>
+                            <td id="weapon4attack"></td>
+                            <td id="weapon4dice"></td>
+                            <td id="weapon4damage"></td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="weapon5">
+                            <td id="weapon5type"></td>
+                            <td id="weapon5range"></td>
+                            <td id="weapon5attack"></td>
+                            <td id="weapon5dice"></td>
+                            <td id="weapon5damage"></td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr id="weapon6">
+                            <td id="weapon6type"></td>
+                            <td id="weapon6range"></td>
+                            <td id="weapon6attack"></td>
+                            <td id="weapon6dice"></td>
+                            <td id="weapon6damage"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -187,16 +192,28 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td class="label">Luck</td><td id="luckbase" class="data base"></td><td id="luckbonus" class="data bonus"></td><td id="lucktotal" class="data total"></td>
+                            <td class="label">Luck</td>
+                            <td id="luckbase" class="data base"></td>
+                            <td id="luckbonus" class="data bonus"></td>
+                            <td id="lucktotal" class="data total"></td>
                         </tr>
                         <tr class="1">
-                            <td class="label">Sneak</td><td id="sneakbase" class="data base"></td><td id="sneakbonus" class="data bonus"></td><td id="sneaktotal" class="data total"></td>
+                            <td class="label">Sneak</td>
+                            <td id="sneakbase" class="data base"></td>
+                            <td id="sneakbonus" class="data bonus"></td>
+                            <td id="sneaktotal" class="data total"></td>
                         </tr>
                         <tr class="2">
-                            <td class="label">Climb</td><td id="climbbase" class="data base"></td><td id="climbbonus" class="data bonus"></td><td id="climbtotal" class="data total"></td>
+                            <td class="label">Climb</td>
+                            <td id="climbbase" class="data base"></td>
+                            <td id="climbbonus" class="data bonus"></td>
+                            <td id="climbtotal" class="data total"></td>
                         </tr>
                         <tr class="3">
-                            <td class="label">Skills</td><td id="skillsbase" class="data base"></td><td id="skillsbonus" class="data bonus"></td><td id="skillstotal" class="data total"></td>
+                            <td class="label">Skills</td>
+                            <td id="skillsbase" class="data base"></td>
+                            <td id="skillsbonus" class="data bonus"></td>
+                            <td id="skillstotal" class="data total"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -211,21 +228,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td></td>
+                        <tr id="armor1">
+                            <td id="armor1type" colspan="2"></td>
+                            <td id="armor1bonus"></td>
                         </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td></td>
+                        <tr id="armor2">
+                            <td id="armor2type" colspan="2"></td>
+                            <td id="armor2bonus"></td>
                         </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td></td>
+                        <tr id="armor3">
+                            <td id="armor3type" colspan="2"></td>
+                            <td id="armor3bonus"></td>
                         </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td></td>
+                        <tr id="armor4">
+                            <td id="armor4type" colspan="2"></td>
+                            <td id="armor4bonus"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -238,43 +255,46 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="gear1">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear2">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear3">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear4">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear5">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear6">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear7">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear8">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear9">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear10">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear11">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear12">
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr id="gear13">
+                            <td></td>
+                        </tr>
+                        <tr id="gear14">
                             <td></td>
                         </tr>
                     </tbody>
@@ -383,4 +403,5 @@
             </div>
         </div>
     </body>
+    <script src="assets/character.js" charset="utf-8"></script>
 </html>
