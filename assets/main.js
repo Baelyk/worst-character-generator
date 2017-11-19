@@ -107,8 +107,6 @@ function createCharacter (name, race, humanBonus) {
             minimum: 20,
             modifier: 19
         }, 39)
-    } else if(race =="halfbreed") {
-        console.log("Ugh")
     } else {
         throw new Error ("race is not one of the options")
     }

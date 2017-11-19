@@ -23,10 +23,7 @@ function raceCheck () {
     } else {
         humanbns.classList.add("hide")
     }
-    if(race.value == "halfbreed") {
-        alert("Half Breeds are not yet supported.")
-        generateBtn.disabled = true
-    } else if(race.value == "n/a") {
+    if(race.value == "n/a") {
         generateBtn.disabled = true
     }
 }

@@ -4,6 +4,8 @@ A character generator for Worst
 
 [Try it!](https://baelyk.github.io/worst-character-generator/)
 
+Alternatively, download it and open `index.html` in your browser.
+
 ## Files
 
 ### CSS
